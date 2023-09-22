@@ -11,6 +11,8 @@ initContainerImage:
   tag: latest
   imagePullPolicy: IfNotPresent
 
+replicaCount: 2
+
 ## Deployment Strategy
 ## ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
 deploymentStrategy:
@@ -225,3 +227,5 @@ serviceAccount:
 ## You can add any config here, but need to respect the format: MM_<GROUPSECTION>_<SETTING>. ie: MM_SERVICESETTINGS_ENABLECOMMANDS: false
 config:
   MM_PLUGINSETTINGS_CLIENTDIRECTORY: "./client/plugins"
+  MM_PLUGINSETTINGS_ENABLE: "true"
+  MM_PLUGINSETTINGS_ENABLEUPLOADS: "true"
